@@ -193,15 +193,15 @@ class ApiRoot(generics.GenericAPIView):
     name = 'api-root'
 
     def get(self, request, *args, **kwargs):
-        return Response({'pracownicy': reverse(UserList.name, request=request),
-                         'firmy': reverse(FirmaList.name, request=request),
-                         'zapisy pracy': reverse(ZapisPracyList.name, request=request),
-                         'prace': reverse(PracaList.name, request=request),
-                         'edycjaPracy': "http://127.0.0.1:8000/auth/praca/1",
-                         'statystyki': "http://127.0.0.1:8000/auth/statystyki",
-                         'statystykiUser': "http://127.0.0.1:8000/auth/statystyki-user/1",
-                         'statystykiUserList': "http://127.0.0.1:8000/auth/statystyki-user-list/1",
-                         'przepracowaneMinutyDzien': "http://127.0.0.1:8000/auth/przepracowane-minuty/?group_by=day",
-                         'przepracowaneMinutyTydzien': "http://127.0.0.1:8000/auth/przepracowane-minuty/?group_by=week",
-                         'przepracowaneMinutyMiesiac': "http://127.0.0.1:8000/auth/przepracowane-minuty/?group_by=month",
-                         'przepracowaneMinutyRok': "http://127.0.0.1:8000/auth/przepracowane-minuty/?group_by=year", })
+        return Response({'pracownicy': "https://rejestr-prac-zdalnej.herokuapp.com/auth/users/",
+                         'firmy': "https://rejestr-prac-zdalnej.herokuapp.com/auth/firma",
+                         'zapisy pracy': "https://rejestr-prac-zdalnej.herokuapp.com/auth/zapis-pracy",
+                         'prace': "https://rejestr-prac-zdalnej.herokuapp.com/auth/praca",
+                         'edycjaPracy': "https://rejestr-prac-zdalnej.herokuapp.com/auth/praca/1",
+                         'statystyki': "https://rejestr-prac-zdalnej.herokuapp.com/auth/statystyki",
+                         'statystykiUser': "https://rejestr-prac-zdalnej.herokuapp.com/auth/statystyki-user/1",
+                         'statystykiUserList': "https://rejestr-prac-zdalnej.herokuapp.com/auth/statystyki-user-list/1",
+                         'przepracowaneMinutyDzien': "https://rejestr-prac-zdalnej.herokuapp.com/auth/przepracowane-minuty/?group_by=day",
+                         'przepracowaneMinutyTydzien': "https://rejestr-prac-zdalnej.herokuapp.com/auth/przepracowane-minuty/?group_by=week",
+                         'przepracowaneMinutyMiesiac': "https://rejestr-prac-zdalnej.herokuapp.com/auth/przepracowane-minuty/?group_by=month",
+                         'przepracowaneMinutyRok': "https://rejestr-prac-zdalnej.herokuapp.com/auth/przepracowane-minuty/?group_by=year", })

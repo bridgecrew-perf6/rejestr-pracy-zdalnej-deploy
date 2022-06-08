@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 from django.contrib import admin
 
-admin.site.site_url = 'http://127.0.0.1:8000/demo/'
+admin.site.site_url = 'https://rejestr-prac-zdalnej.herokuapp.com/demo/'
 urlpatterns = [
     path('firma', views.FirmaList.as_view(), name='firma-list'),
     path('firma/<int:pk>', views.FirmaDetail.as_view(), name='firma-details'),
