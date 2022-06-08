@@ -156,7 +156,4 @@ CSRF_TRUSTED_ORIGINS = [
     'https://deploy-test-praca.herokuapp.com'
 ]
 
-import django_heroku
-django_heroku.settings(locals())
-
 CORS_ALLOW_ALL_ORIGINS = True
